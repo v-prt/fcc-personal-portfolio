@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap");
+
+* {
+  margin: auto;
+  padding: 0;
+  border: 0;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.2s ease-in;
+}
+
+html,
+body {
+  background: linear-gradient(black, black),
+    url("https://wallpapercave.com/wp/wp8038300.png") center center / cover;
+  background-attachment: fixed;
+  background-blend-mode: saturation;
+  color: #fff;
+  position: relative;
+  width: 100vw;
+  overscroll-behavior-x: none;
+  overscroll-behavior-y: none;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+a {
+  color: #fff;
+}
+
+nav {
+  background: #800000;
+  z-index: 2;
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 60%);
+}
+
+nav a {
+  padding: 10px 20px;
+}
+
+nav a:hover {
+  background: #1a1a1a;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.welcome-div {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  min-height: 150px;
+}
+
+#welcome-section h1 {
+  padding: 10px;
+}
+
+.rotating-text-div {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+}
+
+.rotating-text-div p {
+  position: absolute;
+  top: 0px;
+  opacity: 0;
+  transform: translate3d(0px, 50px, 0px);
+  animation: 12s ease-in-out infinite rotation;
+}
+
+.rotating-text-div p:nth-of-type(2) {
+  animation-delay: 3s;
+}
+
+.rotating-text-div p:nth-of-type(3) {
+  animation-delay: 6s;
+}
+
+.rotating-text-div p:nth-of-type(4) {
+  animation-delay: 9s;
+}
+
+@keyframes rotation {
+  0% {
+    opacity: 0;
+    transform: translate3d(0px, 50px, 0px);
+  }
+  2.5% {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+  }
+  25% {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+  }
+  27.5% {
+    opacity: 0;
+    transform: translate3d(0px, -50px, 0px);
+  }
+  99.9999% {
+    opacity: 0;
+    transform: translate3d(0px, -50px, 0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(0px, 50px, 0px);
+  }
+}
+
+#welcome-section p {
+  color: #b30000;
+  font-style: italic;
+  font-weight: 200;
+}
+
+#projects {
+  background: #f2f2f2;
+  padding: 50px 0;
+  width: 100%;
+}
+
+#projects h2 {
+  color: #1a1a1a;
+  padding: 10px;
+  border-bottom: 2px solid #800000;
+}
+
+.project-tiles {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-tile {
+  width: 400px;
+  margin: 30px;
+  box-shadow: 0px 0px 10px #ccc;
+}
+
+.project-tile:hover {
+  transform: scale(1.05);
+}
+
+.project-tile:hover span {
+  opacity: 1;
+}
+
+.project-tile:hover img {
+  filter: grayscale(0);
+}
+
+.project-tile img {
+  filter: grayscale(1);
+  width: 100%;
+}
+
+.project-tile h3 {
+  font-family: "Raleway", serif;
+  background: #1a1a1a;
+  padding: 15px;
+}
+
+.code {
+  font-family: "Raleway", serif;
+  opacity: 0;
+  color: #ffd700;
+}
+
+#contact {
+  background: linear-gradient(black, transparent);
+  width: 100%;
+}
+
+.contact-div {
+  background: rgba(250, 250, 250, 0.7);
+  color: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  padding: 50px;
+}
+
+.contact-div p {
+  color: #b30000;
+  margin: 0 0 50px 0;
+  font-style: italic;
+}
+
+.contact-div a {
+  position: relative;
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 1px #1a1a1a;
+  transition: 0.3s ease-in-out;
+}
+
+.contact-div a:hover {
+  background: #800000;
+}
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+}
